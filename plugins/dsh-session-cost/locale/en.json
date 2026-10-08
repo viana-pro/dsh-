@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Session Cost",
+    "description": "Shows the estimated money spent on the current task in the composer info bar (DeepSeek price list, CNY, peak/off-peak aware)."
+  }
+}

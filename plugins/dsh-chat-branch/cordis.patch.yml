@@ -1,0 +1,13 @@
+# dsh-chat-branch bundle layer.
+#
+# Installed as a profile bundle, this layer inserts the plugin row into the
+# composed host tree; the row is what puts this package's `exports["./client"]`
+# bundle into the browser boot graph, so the branch controls appear on the next
+# page load without hand-editing the profile's own cordis.patch.yml.
+#
+# `name` must equal the INSTALLED package name: the Loader resolves it from the
+# profile's node_modules.
+
+- insert:
+    - id: chat-branch
+      name: 'dsh-chat-branch'

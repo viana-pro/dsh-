@@ -1,0 +1,18 @@
+# dsh-session-cost bundle patch.
+#
+# Applied by the profile launcher when this package is installed as a bundle
+# (它的名字出现在 profile 的 dsh.profile.bundles 里时): it contributes the plugin
+# row into the host composition, so no manual edit of the profile's own
+# cordis.patch.yml is needed.
+#
+# The plugin is WEB-PLANE: the host half is a no-op that exists only so the row
+# is in the Loader tree, while the browser half (discovered from this package's
+# `dsh.client` declaration) renders the ¥ pill in the composer info bar.
+#
+# The `name` here must equal the INSTALLED package name — the Loader resolves it
+# from the profile's node_modules. A fork published under a scope (for example
+# `@you/dsh-session-cost`) must update this line to that scoped name.
+
+- insert:
+    - id: session-cost
+      name: 'dsh-session-cost'

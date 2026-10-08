@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Prompt Polish",
+    "description": "Adds a button to the composer tool row: polish the current draft into a clearer, more executable instruction and write it back."
+  }
+}

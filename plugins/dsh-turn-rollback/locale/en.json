@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Turn rollback",
+    "description": "Discard the newest finished turn's file changes: delete the files it created and restore the ones it changed, so the workspace holds the state the previous turn left behind."
+  }
+}

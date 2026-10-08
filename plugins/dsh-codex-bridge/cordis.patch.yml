@@ -1,0 +1,17 @@
+# dsh-codex-bridge bundle layer.
+#
+# This layer is what makes the plugin a *selectable bundle*: it registers the
+# agent-plane row that provides the `apply_patch` tool and its prompt section.
+# It is applied after the shipped bundles, so the row it inserts is part of the
+# profile's composed tree and the Web plugin page can toggle it.
+#
+# The row is mounted at the profile root, like the other host-plane tool rows.
+# A deployment that wants it scoped to one agent preset instead can restate
+# that preset's `plugins` list in a later patch layer.
+
+- insert:
+    - id: codex-bridge
+      name: dsh-codex-bridge
+      config:
+        maxPatchBytes: 1000000
+        maxFiles: 50

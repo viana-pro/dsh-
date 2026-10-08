@@ -1,0 +1,15 @@
+# dsh-turn-rollback bundle layer.
+#
+# Installed as a profile bundle, this layer inserts the plugin row into the
+# composed host tree, so the `/rollback` command and the `rollback_turn` tool
+# are available without hand-editing the profile's own cordis.patch.yml.
+#
+# `name` must equal the INSTALLED package name: the Loader resolves it from the
+# profile's node_modules.
+
+- insert:
+    - id: turn-rollback
+      name: 'dsh-turn-rollback'
+      config:
+        maxFileBytes: 2097152
+        maxTurns: 20
